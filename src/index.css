@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--background-white);
+    color: var(--text-800);
+    line-height: 1.6;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}

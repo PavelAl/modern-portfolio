@@ -1,0 +1,54 @@
+.introduction {
+    width: 100%;
+    padding: 0 32px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.textSection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    max-width: 50%;
+    min-width: 0;
+}
+
+.title {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.text {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.svgSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    max-width: 50%;
+    min-width: 0;
+}
+
+.developerSvg {
+    width: 100%;
+    height: auto;
+    max-width: min(600px, 100%);
+    max-height: 80vh;
+    object-fit: contain;
+}

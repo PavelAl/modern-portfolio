@@ -1,0 +1,72 @@
+.skills {
+    width: 100%;
+    padding: 0 32px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+
+    // Initial state - elements are hidden
+    .textSection {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .imageSection {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition-delay: 0.2s;
+    }
+}
+
+.leftRight {
+    flex-direction: row;
+
+    // For left-right layout, text comes from left, image from right
+    .textSection {
+        transform: translateX(-100px);
+    }
+
+    .imageSection {
+        transform: translateX(100px);
+    }
+}
+
+.rightLeft {
+    flex-direction: row-reverse;
+
+    // For right-left layout, text comes from right, image from left
+    .textSection {
+        transform: translateX(100px);
+    }
+
+    .imageSection {
+        transform: translateX(-100px);
+    }
+}
+
+// Animation states when visible
+.visible {
+    .textSection {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .imageSection {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.textVisible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.imageVisible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
