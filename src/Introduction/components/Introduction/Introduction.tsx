@@ -1,18 +1,17 @@
 import React from "react";
+import classNames from "classnames";
 
-import { DeveloperSVG } from "../../../App/assets/DeveloperSVG";
+import { DeveloperSVG } from "../../../App/assets";
 
 import type { IntroductionProps } from "./Introduction.types";
 
 import styles from "./Introduction.styles.module.scss";
 
-export const Introduction: React.FC<IntroductionProps> = ({
-  title,
-  text,
-  className,
-}) => {
+export const Introduction: React.FC<IntroductionProps> = (props) => {
+  const { className, title, text } = props;
+
   return (
-    <div className={`${styles.introduction} ${className || ""}`}>
+    <div className={classNames(styles.introduction, className)}>
       <div className={styles.textSection}>
         <h1 className={styles.title}>{title}</h1>
 

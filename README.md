@@ -1,54 +1,153 @@
-# React + TypeScript + Vite
+# Modern Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React, TypeScript, and Vite. This project showcases professional experience, skills, education, and provides contact information in an elegant and interactive design.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Optimized for all device sizes
+- **Modern Tech Stack**: Built with React 19, TypeScript, and Vite
+- **Interactive Components**: Animated skills section and smooth navigation
+- **Professional Sections**:
+  - Introduction with personal branding
+  - Skills showcase with icons and animations
+  - Work experience timeline
+  - Education background
+  - Contact information and methods
+- **Clean Architecture**: Well-organized component structure with TypeScript types
+- **SCSS Modules**: Scoped styling with modern CSS features
+- **FontAwesome Icons**: Professional iconography throughout the site
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 19, TypeScript
+- **Build Tool**: Vite
+- **Styling**: SCSS Modules
+- **Icons**: FontAwesome
+- **Linting**: ESLint with TypeScript support
+- **Type Checking**: TypeScript compiler
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Project Structure
+
+```
+src/
+├── App/                    # Main application component
+├── Introduction/           # Personal introduction section
+├── Skills/                # Skills showcase with animations
+├── WorkExperience/        # Professional experience timeline
+├── Education/             # Educational background
+├── Contacts/              # Contact information and methods
+├── Layout/                # Header, Footer, and layout components
+├── Library/               # Reusable UI components (Icons, etc.)
+└── theme/                 # Global styles and theme configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Make sure you have the following installed on your system:
+- **Node.js** (version 18 or higher)
+- **npm** or **yarn** package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd modern-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the portfolio
+
+### Available Scripts
+
+- `npm run dev` - Start the development server with hot reload
+- `npm run type-check` - Run TypeScript type checking
+- `npm run lint` - Run ESLint to check for code issues
+- `npm run lint-fix` - Automatically fix ESLint issues where possible
+
+## 🎨 Customization
+
+### Personal Information
+
+Update your personal information in the following files:
+
+1. **Introduction**: Edit `src/App/constants/introduction.ts`
+2. **Skills**: Modify `src/App/constants/skills.ts`
+3. **Work Experience**: Update `src/App/constants/workExperience.ts`
+4. **Contact Methods**: Edit `src/App/constants/contactMethods.ts`
+
+### Styling
+
+- Global styles: `src/theme/theme.css` and `src/theme/theme.scss`
+- Component-specific styles: Each component has its own `.styles.module.scss` file
+- Fonts: Custom fonts are located in `src/App/assets/fonts/`
+
+### Adding New Sections
+
+1. Create a new folder in `src/` for your section
+2. Follow the existing component structure with:
+   - `components/` folder for React components
+   - `types/` folder for TypeScript interfaces
+   - `index.ts` for exports
+3. Import and add to `src/App/App.tsx`
+
+## 🔧 Development Guidelines
+
+- **TypeScript**: All components use TypeScript with proper type definitions
+- **Component Structure**: Each component has its own folder with:
+  - Component file (`.tsx`)
+  - Styles file (`.styles.module.scss`)
+  - Types file (`.types.ts`)
+  - Index file (`index.ts`)
+- **Imports**: Use path aliases (`~/`) for cleaner imports
+- **Styling**: Use SCSS modules for component-scoped styles
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎯 Deployment
+
+The project can be easily deployed to various platforms:
+
+- **Vercel**: Connect your repository for automatic deployments
+- **Netlify**: Drag and drop the `dist` folder after running `npm run build`
+- **GitHub Pages**: Use GitHub Actions for automated deployment
+
+To build for production:
+```bash
+npm run build
 ```
+
+The built files will be in the `dist/` directory.
+
+---
+
+**Made with ❤️ using React, TypeScript, and Vite**

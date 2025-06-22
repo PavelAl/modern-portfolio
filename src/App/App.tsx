@@ -1,5 +1,5 @@
 import { Introduction } from "~/Introduction";
-import { Header } from "~/Layout";
+import { Header, Footer } from "~/Layout";
 import { ContactMe } from "~/Contacts";
 
 import { Skills, WorkExperience, EducationSection } from "./components";
@@ -8,27 +8,42 @@ import { contactMethods } from "./constants/contactMethods";
 
 import classes from "./App.styles.module.scss";
 
+const headerLinks = [
+  { text: "Home", href: "#home" },
+  { text: "Skills", href: "#skills" },
+  { text: "Experience", href: "#experience" },
+  { text: "Education", href: "#education" },
+  { text: "Contacts", href: "#contacts" },
+];
+
 export const App = () => {
   return (
-    <div className={classes.content}>
-      <Header />
+    <>
+      <Header links={headerLinks} />
 
-      <Introduction
-        title={introductionData.title}
-        text={introductionData.text}
-      />
+      <main className={classes.container}>
+        <div className={classes.content}>
+          <Introduction
+            className={classes.introduction}
+            title={introductionData.title}
+            text={introductionData.text}
+          />
 
-      <Skills />
+          <Skills />
 
-      <WorkExperience />
+          <WorkExperience />
 
-      <EducationSection />
+          <EducationSection />
 
-      <ContactMe
-        title="Want to connect?"
-        text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
-        contactMethods={contactMethods}
-      />
-    </div>
+          <ContactMe
+            title="Want to connect?"
+            text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
+            contactMethods={contactMethods}
+          />
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 };

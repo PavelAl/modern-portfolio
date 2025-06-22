@@ -23,11 +23,4 @@ export const workExperienceData: WorkExperienceData[] = [
       "Started career building web applications and learning modern development practices. Gained experience with JavaScript, HTML, CSS, and version control systems.",
     emblem: PolytechLogoSVG,
   },
-  {
-    title: "Intern",
-    position: "Software Development Intern",
-    description:
-      "Completed internship program focusing on software development fundamentals. Contributed to various projects and learned industry best practices.",
-    emblem: PolytechLogoSVG,
-  },
 ];
