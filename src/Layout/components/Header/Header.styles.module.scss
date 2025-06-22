@@ -1,10 +1,12 @@
 .header {
-    height: 100px;
-    padding: 0 32px;
-
+    width: 100%;
+    height: 80px;
+    padding: 0 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(168, 201, 219, 0.3);
 }
 
 .logo {
@@ -21,13 +23,35 @@
 
 .headerLink {
     text-decoration: none;
-    color: #333;
+    color: var(--text-600);
+    font-size: var(--font-size-md);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    position: relative;
     transition: background-color 0.2s ease;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
 
-    &:hover {
-        background-color: #e9ecef;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0.25rem;
+        left: 1rem;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-600);
+        transition: width 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--text-800);
+
+        &::after {
+            width: calc(100% - 2rem);
+        }
     }
 }

@@ -1,2 +1,1 @@
-export * from "./DeveloperSVG";
-export * from "./PolytechLogoSVG";
+export * from "./images";

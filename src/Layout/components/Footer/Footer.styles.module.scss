@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    padding: 12px 80px;
+    background-color: var(--background-secondary);
+    box-shadow: 0 -2px 8px rgba(168, 201, 219, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerText {
+    color: var(--text-600);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-align: center;
+}
