@@ -33,6 +33,15 @@ import {
   faExclamationTriangle,
   faCheckCircle,
   faTimesCircle,
+  faVial,
+  faCogs,
+  faCodeBranch,
+  faPalette,
+  faUniversalAccess,
+  faUsers,
+  faServer,
+  faCloud,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -52,6 +61,8 @@ import {
   faAws,
   faNpm,
   faYarn,
+  faSass,
+  faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope as farEnvelope,
@@ -101,6 +112,15 @@ library.add(
   faExclamationTriangle,
   faCheckCircle,
   faTimesCircle,
+  faVial,
+  faCogs,
+  faCodeBranch,
+  faPalette,
+  faUniversalAccess,
+  faUsers,
+  faServer,
+  faCloud,
+  faDatabase,
 
   // Brand icons
   faGithub,
@@ -120,6 +140,8 @@ library.add(
   faAws,
   faNpm,
   faYarn,
+  faSass,
+  faNodeJs,
 
   // Regular icons
   farEnvelope,

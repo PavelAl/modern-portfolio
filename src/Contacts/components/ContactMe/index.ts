@@ -1,5 +1,2 @@
 export { ContactMe } from "./ContactMe";
-export type {
-  ContactMeProps,
-  ContactMethod as ContactSource,
-} from "./ContactMe.types";
+export type { ContactMeProps } from "./ContactMe.types";

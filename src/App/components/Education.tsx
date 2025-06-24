@@ -1,4 +1,4 @@
-import { Education } from "~/Education";
+import { AnimatedEducation } from "~/Education";
 import { SectionHeader } from "~/Layout";
 
 import { PolytechLogoSVG } from "../assets";
@@ -8,14 +8,14 @@ export const EducationSection = () => {
     <>
       <SectionHeader title="Education" />
 
-      <Education
+      <AnimatedEducation
         emblem={PolytechLogoSVG}
         universityTitle="Saint Petersburg State Polytechnic University"
         degree="Master's degree, Informatics & Computer Science"
         dates="SEP.2012 - SEP.2014"
       />
 
-      <Education
+      <AnimatedEducation
         emblem={PolytechLogoSVG}
         universityTitle="Saint Petersburg State Polytechnic University"
         degree="BSc, Informatics & Computer Science"

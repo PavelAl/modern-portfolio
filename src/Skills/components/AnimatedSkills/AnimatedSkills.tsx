@@ -1,62 +1,29 @@
-import { useEffect, useRef, useState, type FC } from "react";
+import { type FC } from "react";
 import classNames from "classnames";
 
+import { useAnimatedAppearance } from "~/Library/Animations";
+
 import { Skills } from "../Skills";
+import type { SkillsClasses } from "../Skills";
 
 import type { AnimatedSkillsProps } from "./AnimatedSkills.types";
 
-import classes from "./AnimatedSkills.styles.module.scss";
-
 export const AnimatedSkills: FC<AnimatedSkillsProps> = (props) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const skillsRef = useRef<HTMLDivElement>(null);
+  const { direction } = props;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // Once visible, we don't need to observe anymore
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.2, // Trigger when 20% of the component is visible
-        rootMargin: "0px 0px -50px 0px", // Trigger slightly before the element is fully in view
-      },
-    );
+  const { rootRef, animatedClasses } = useAnimatedAppearance();
 
-    const skillsElement = skillsRef.current;
-
-    if (skillsElement) {
-      observer.observe(skillsElement);
-    }
-
-    return () => {
-      if (skillsElement) {
-        observer.unobserve(skillsElement);
-      }
-    };
-  }, []);
-
-  const skillsClasses = {
-    root: classNames(
-      classes.skills,
-      props.direction === "left-right" ? classes.leftRight : classes.rightLeft,
-      isVisible && classes.visible,
-      props.classes?.root,
+  const resultClasses: SkillsClasses = {
+    root: classNames(animatedClasses.root, props.classes?.root),
+    text: classNames(
+      direction === "left-right" ? animatedClasses.left : animatedClasses.right,
+      props.classes?.text,
     ),
-    right: classNames(
-      classes.textSection,
-      isVisible && classes.textVisible,
-      props.classes?.right,
-    ),
-    left: classNames(
-      classes.imageSection,
-      isVisible && classes.imageVisible,
-      props.classes?.left,
+    image: classNames(
+      direction === "left-right" ? animatedClasses.right : animatedClasses.left,
+      props.classes?.image,
     ),
   };
 
-  return <Skills {...props} classes={skillsClasses} ref={skillsRef} />;
+  return <Skills {...props} classes={resultClasses} ref={rootRef} />;
 };
