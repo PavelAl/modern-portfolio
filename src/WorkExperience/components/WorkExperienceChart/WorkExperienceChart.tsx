@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import classNames from "classnames";
 
-import { WorkExperience } from "../WorkExperience";
+import { AnimatedWorkExperience } from "../AnimatedWorkExperience";
 
 import type { WorkExperienceChartProps } from "./WorkExperienceChart.types";
 
@@ -22,7 +22,7 @@ export const WorkExperienceChart: FC<WorkExperienceChartProps> = (props) => {
             classes.workExperience,
           )}
         >
-          <WorkExperience
+          <AnimatedWorkExperience
             emblem={jobData.emblem}
             title={jobData.title}
             position={jobData.position}

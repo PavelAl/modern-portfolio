@@ -8,17 +8,13 @@ export const Skills = () => {
     <>
       <SectionHeader title={"What I Am Good At"} />
 
-      <AnimatedSkills
-        direction="left-right"
-        {...skillsData["Frontend Development"]}
-      />
-
-      <AnimatedSkills direction="right-left" {...skillsData["UI/UX Design"]} />
-
-      <AnimatedSkills
-        direction="left-right"
-        {...skillsData["Development Tools"]}
-      />
+      {skillsData.map((skills, index) => (
+        <AnimatedSkills
+          key={skills.key}
+          direction={index % 2 === 0 ? "left-right" : "right-left"}
+          {...skillsData[index]}
+        />
+      ))}
     </>
   );
 };

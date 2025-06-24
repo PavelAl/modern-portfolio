@@ -1,2 +1,2 @@
 export { Skills } from "./Skills";
-export type { SkillsProps, SkillIcon } from "./Skills.types";
+export type { SkillsProps, SkillsClasses, SkillIcon } from "./Skills.types";

@@ -1,2 +1,2 @@
 export { Education } from "./Education";
-export type { EducationProps } from "./Education.types";
+export type { EducationProps, EducationClasses } from "./Education.types";

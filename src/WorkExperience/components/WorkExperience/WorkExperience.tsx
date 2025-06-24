@@ -7,6 +7,7 @@ import classes from "./WorkExperience.styles.module.scss";
 
 export const WorkExperience: FC<WorkExperienceProps> = (props) => {
   const {
+    ref,
     classes: customClasses,
     emblem: Emblem,
     title,
@@ -15,7 +16,10 @@ export const WorkExperience: FC<WorkExperienceProps> = (props) => {
   } = props;
 
   return (
-    <div className={classNames(customClasses?.root, classes.workExperience)}>
+    <div
+      ref={ref}
+      className={classNames(customClasses?.root, classes.workExperience)}
+    >
       <div className={classNames(customClasses?.emblem, classes.emblem)}>
         <Emblem />
       </div>

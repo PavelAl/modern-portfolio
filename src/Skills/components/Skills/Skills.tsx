@@ -7,11 +7,26 @@ import type { SkillsProps } from "./Skills.types";
 import classes from "./Skills.styles.module.scss";
 
 export const Skills: FC<SkillsProps> = (props) => {
-  const { title, text, img, skillsIcons, classes: customClasses, ref } = props;
+  const {
+    ref,
+    classes: customClasses,
+    direction = "left-right",
+    title,
+    text,
+    img,
+    skillsIcons,
+  } = props;
 
   return (
-    <div ref={ref} className={classNames(customClasses?.root, classes.skills)}>
-      <div className={classNames(customClasses?.right, classes.textSection)}>
+    <div
+      ref={ref}
+      className={classNames(
+        customClasses?.root,
+        classes.skills,
+        direction === "left-right" ? classes.leftRight : classes.rightLeft,
+      )}
+    >
+      <div className={classNames(customClasses?.text, classes.textSection)}>
         <Title title={title} />
 
         <Icons skillsIcons={skillsIcons} />
@@ -19,7 +34,7 @@ export const Skills: FC<SkillsProps> = (props) => {
         <Text text={text} />
       </div>
 
-      <Image className={classNames(customClasses?.left)} img={img} />
+      <Image className={classNames(customClasses?.image)} img={img} />
     </div>
   );
 };
