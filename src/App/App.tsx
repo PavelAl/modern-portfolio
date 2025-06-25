@@ -1,6 +1,7 @@
 import { Introduction } from "~/Introduction";
 import { Header, Footer } from "~/Layout";
 import { ContactMe } from "~/Contacts";
+import type { HeaderLink } from "~/Layout/components/Header/Header.types";
 
 import {
   Skills,
@@ -13,43 +14,59 @@ import { contactMethods } from "./constants/contactMethods";
 
 import classes from "./App.styles.module.scss";
 
-const headerLinks = [
-  { text: "Home", href: "#home" },
-  { text: "Skills", href: "#skills" },
-  { text: "Experience", href: "#experience" },
-  { text: "Education", href: "#education" },
-  { text: "Icons", href: "#icons" },
-  { text: "Contacts", href: "#contacts" },
+const headerLinks: HeaderLink[] = [
+  { key: "home", text: "Home" },
+  { key: "skills", text: "Skills" },
+  { key: "experience", text: "Experience" },
+  { key: "education", text: "Education" },
+  { key: "contacts", text: "Contacts" },
 ];
 
 export const App = () => {
+  const handleLinkClick = (key: string) => {
+    const element = document.getElementById(key);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <>
-      <Header links={headerLinks} />
+      <Header links={headerLinks} onLinkClicked={handleLinkClick} />
 
       <main className={classes.container}>
         <div className={classes.content}>
-          <Introduction
-            className={classes.introduction}
-            title={introductionData.title}
-            text={introductionData.text}
-          />
-
-          <Skills />
-
-          <WorkExperience />
-
-          <EducationSection />
-
-          <div id="icons">
-            <BrandIconGallery />
+          <div id="home">
+            <Introduction
+              className={classes.introduction}
+              title={introductionData.title}
+              text={introductionData.text}
+            />
           </div>
 
-          <ContactMe
-            title="Want to connect?"
-            text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
-            contactMethods={contactMethods}
-          />
+          <div id="skills">
+            <Skills />
+          </div>
+
+          <div id="experience">
+            <WorkExperience />
+          </div>
+
+          <div id="education">
+            <EducationSection />
+          </div>
+
+          <div id="contacts">
+            <ContactMe
+              title="Want to connect?"
+              text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
+              contactMethods={contactMethods}
+            />
+          </div>
         </div>
       </main>
 
