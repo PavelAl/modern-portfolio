@@ -13,7 +13,8 @@ import animationClasses from "./AnimatedWorkExperience.styles.module.scss";
 export const AnimatedWorkExperience: FC<AnimatedWorkExperienceProps> = (
   props,
 ) => {
-  const { rootRef, animatedClasses, isVisible } = useAnimatedAppearance();
+  const { rootRef, animatedClasses, isVisible } =
+    useAnimatedAppearance<HTMLDivElement>();
 
   const resultClasses: WorkExperienceClasses = {
     root: classNames(animatedClasses.root, props.classes?.root),

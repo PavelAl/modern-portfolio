@@ -148,6 +148,10 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
+## Brand icons
+
+Brand svg icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 ---
 
 **Made with ❤️ using React, TypeScript, and Vite**
