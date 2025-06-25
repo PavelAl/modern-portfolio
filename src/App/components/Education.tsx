@@ -1,12 +1,18 @@
+import type { FC } from "react";
+
 import { AnimatedEducation } from "~/Education";
 import { SectionHeader } from "~/Layout";
 
 import { PolytechLogoSVG } from "../assets";
 
-export const EducationSection = () => {
+interface EducationSectionProps {
+  id?: string;
+}
+
+export const EducationSection: FC<EducationSectionProps> = ({ id }) => {
   return (
     <>
-      <SectionHeader title="Education" />
+      <SectionHeader id={id} title="Education" />
 
       <AnimatedEducation
         emblem={PolytechLogoSVG}

@@ -1,12 +1,20 @@
+import type { FC } from "react";
+
 import { SectionHeader } from "~/Layout";
 import { WorkExperienceChart } from "~/WorkExperience";
 
 import { workExperienceData } from "../constants";
 
-export const WorkExperience = () => {
+type Props = {
+  id?: string;
+};
+
+export const WorkExperience: FC<Props> = (props) => {
+  const { id } = props;
+
   return (
     <>
-      <SectionHeader title="Work Experience" />
+      <SectionHeader id={id} title="Work Experience" />
 
       <WorkExperienceChart data={workExperienceData} />
     </>

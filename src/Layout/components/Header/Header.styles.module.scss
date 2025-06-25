@@ -7,6 +7,19 @@
     justify-content: space-between;
     background-color: white;
     box-shadow: 0 2px 8px rgba(168, 201, 219, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.visible {
+    transform: translateY(0);
+}
+
+.hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
@@ -19,39 +32,4 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-}
-
-.headerLink {
-    text-decoration: none;
-    color: var(--text-600);
-    font-size: var(--font-size-md);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    position: relative;
-    transition: background-color 0.2s ease;
-    background: none;
-    outline: none;
-    border: none;
-    cursor: pointer;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0.25rem;
-        left: 1rem;
-        width: 0;
-        height: 2px;
-        background-color: var(--primary-600);
-        transition: width 0.3s ease;
-    }
-
-    &:hover,
-    &:focus {
-        color: var(--text-800);
-
-        &::after {
-            width: calc(100% - 2rem);
-        }
-    }
 }

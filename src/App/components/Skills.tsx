@@ -1,19 +1,21 @@
+import type { FC } from "react";
+
 import { AnimatedSkills } from "~/Skills";
 import { SectionHeader } from "~/Layout";
 
 import { skillsData } from "../constants";
 
-export const Skills = () => {
+interface SkillsProps {
+  id?: string;
+}
+
+export const Skills: FC<SkillsProps> = ({ id }) => {
   return (
     <>
-      <SectionHeader title={"What I Am Good At"} />
+      <SectionHeader id={id} title={"What I Am Good At"} />
 
-      {skillsData.map((skills, index) => (
-        <AnimatedSkills
-          key={skills.key}
-          direction={index % 2 === 0 ? "left-right" : "right-left"}
-          {...skillsData[index]}
-        />
+      {skillsData.map(({ key, ...skill }) => (
+        <AnimatedSkills key={key} direction={"left-right"} {...skill} />
       ))}
     </>
   );

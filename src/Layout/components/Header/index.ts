@@ -1,2 +1,2 @@
 export { Header } from "./Header";
-export type { HeaderProps } from "./Header.types";
+export type { HeaderProps, HeaderLink } from "./Header.types";
