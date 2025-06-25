@@ -3,17 +3,17 @@ import { SectionHeader } from "~/Layout";
 
 import { skillsData } from "../constants";
 
-export const Skills = () => {
+interface SkillsProps {
+  id?: string;
+}
+
+export const Skills = ({ id }: SkillsProps) => {
   return (
     <>
-      <SectionHeader title={"What I Am Good At"} />
+      <SectionHeader id={id} title={"What I Am Good At"} />
 
-      {skillsData.map(({ key, ...skill }, index) => (
-        <AnimatedSkills
-          key={key}
-          direction={index % 2 === 0 ? "left-right" : "right-left"}
-          {...skill}
-        />
+      {skillsData.map(({ key, ...skill }) => (
+        <AnimatedSkills key={key} direction={"left-right"} {...skill} />
       ))}
     </>
   );

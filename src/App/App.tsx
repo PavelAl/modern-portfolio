@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 import { Introduction } from "~/Introduction";
 import { Header, Footer } from "~/Layout";
 import { ContactMe } from "~/Contacts";
-import type { HeaderLink } from "~/Layout/components/Header/Header.types";
+import type { HeaderLink } from "~/Layout/components";
+import { useScrollDirection } from "~/Library/Scrolling";
 
 import { Skills, WorkExperience, EducationSection } from "./components";
 import { introductionData } from "./constants";
@@ -18,10 +21,15 @@ const headerLinks: HeaderLink[] = [
 ];
 
 export const App = () => {
+  const [scrolledWithClick, setScrolledWithClick] = useState(false);
+  const [headerIsVisible, setHeaderVisible] = useState(true);
+  const { getScrollDirection } = useScrollDirection();
+
   const handleLinkClick = (key: string) => {
     const element = document.getElementById(key);
     if (!element) return;
 
+    setScrolledWithClick(true);
     if (key === "home") {
       element?.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -31,9 +39,26 @@ export const App = () => {
 
   return (
     <>
-      <Header links={headerLinks} onLinkClicked={handleLinkClick} />
+      <Header
+        links={headerLinks}
+        isVisible={headerIsVisible}
+        onLinkClicked={handleLinkClick}
+      />
 
-      <main id="home" className={classes.container}>
+      <main
+        id="home"
+        className={classes.container}
+        onScrollEnd={() => {
+          if (scrolledWithClick) {
+            setHeaderVisible(false);
+            setScrolledWithClick(false);
+          }
+        }}
+        onScroll={(e) => {
+          const direction = getScrollDirection(e);
+          setHeaderVisible(direction === "up");
+        }}
+      >
         <div className={classes.content}>
           <Introduction
             className={classes.introduction}
@@ -41,29 +66,22 @@ export const App = () => {
             text={introductionData.text}
           />
 
-          <div id="skills">
-            <Skills />
-          </div>
+          <Skills id="skills" />
 
-          <div id="experience">
-            <WorkExperience />
-          </div>
+          <WorkExperience id="experience" />
 
-          <div id="education">
-            <EducationSection />
-          </div>
+          <EducationSection id="education" />
 
-          <div id="contacts">
-            <ContactMe
-              title="Want to connect?"
-              text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
-              contactMethods={contactMethods}
-            />
-          </div>
+          <ContactMe
+            id="contacts"
+            title="Want to connect?"
+            text="Feel free to reach out! I'm always open to exciting opportunities and new connections."
+            contactMethods={contactMethods}
+          />
+
+          <Footer />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 };

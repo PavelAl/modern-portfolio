@@ -6,5 +6,6 @@ export interface HeaderLink {
 export interface HeaderProps {
   className?: string;
   links?: HeaderLink[];
+  isVisible?: boolean;
   onLinkClicked?: (key: string) => void;
 }

@@ -7,13 +7,14 @@ import type { ContactMeProps } from "./ContactMe.types";
 import styles from "./ContactMe.styles.module.scss";
 
 export const ContactMe: React.FC<ContactMeProps> = ({
+  id,
   title,
   text,
   contactMethods: contactSources,
   className,
 }) => {
   return (
-    <div className={`${styles.contactMe} ${className || ""}`}>
+    <div id={id} className={`${styles.contactMe} ${className || ""}`}>
       <h2 className={styles.title}>{title}</h2>
 
       <p className={styles.text}>{text}</p>
