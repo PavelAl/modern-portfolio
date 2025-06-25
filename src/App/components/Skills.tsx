@@ -1,3 +1,5 @@
+import type { FC } from "react";
+
 import { AnimatedSkills } from "~/Skills";
 import { SectionHeader } from "~/Layout";
 
@@ -7,7 +9,7 @@ interface SkillsProps {
   id?: string;
 }
 
-export const Skills = ({ id }: SkillsProps) => {
+export const Skills: FC<SkillsProps> = ({ id }) => {
   return (
     <>
       <SectionHeader id={id} title={"What I Am Good At"} />

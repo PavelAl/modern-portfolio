@@ -1,4 +1,4 @@
-import type { ComponentType } from "react";
+import type { ComponentType, RefObject } from "react";
 
 export interface EducationClasses {
   root?: string;
@@ -12,4 +12,5 @@ export interface EducationProps {
   universityTitle: string;
   degree: string;
   dates: string;
+  ref?: RefObject<HTMLDivElement>;
 }

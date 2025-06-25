@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { FC } from "react";
 
 import { Introduction } from "~/Introduction";
 import { Header, Footer } from "~/Layout";
@@ -20,7 +21,7 @@ const headerLinks: HeaderLink[] = [
   { key: "contacts", text: "Contacts" },
 ];
 
-export const App = () => {
+export const App: FC = () => {
   const [scrolledWithClick, setScrolledWithClick] = useState(false);
   const [headerIsVisible, setHeaderVisible] = useState(true);
   const { getScrollDirection } = useScrollDirection();

@@ -1,3 +1,5 @@
+import type { FC } from "react";
+
 import { AnimatedEducation } from "~/Education";
 import { SectionHeader } from "~/Layout";
 
@@ -7,7 +9,7 @@ interface EducationSectionProps {
   id?: string;
 }
 
-export const EducationSection = ({ id }: EducationSectionProps) => {
+export const EducationSection: FC<EducationSectionProps> = ({ id }) => {
   return (
     <>
       <SectionHeader id={id} title="Education" />
