@@ -11,7 +11,7 @@ import type { AnimatedSkillsProps } from "./AnimatedSkills.types";
 export const AnimatedSkills: FC<AnimatedSkillsProps> = (props) => {
   const { direction } = props;
 
-  const { rootRef, animatedClasses } = useAnimatedAppearance();
+  const { rootRef, animatedClasses } = useAnimatedAppearance<HTMLDivElement>();
 
   const resultClasses: SkillsClasses = {
     root: classNames(animatedClasses.root, props.classes?.root),
