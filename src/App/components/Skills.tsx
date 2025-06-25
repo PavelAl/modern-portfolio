@@ -8,11 +8,11 @@ export const Skills = () => {
     <>
       <SectionHeader title={"What I Am Good At"} />
 
-      {skillsData.map((skills, index) => (
+      {skillsData.map(({ key, ...skill }, index) => (
         <AnimatedSkills
-          key={skills.key}
+          key={key}
           direction={index % 2 === 0 ? "left-right" : "right-left"}
-          {...skillsData[index]}
+          {...skill}
         />
       ))}
     </>

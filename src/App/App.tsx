@@ -3,12 +3,7 @@ import { Header, Footer } from "~/Layout";
 import { ContactMe } from "~/Contacts";
 import type { HeaderLink } from "~/Layout/components/Header/Header.types";
 
-import {
-  Skills,
-  WorkExperience,
-  EducationSection,
-  BrandIconGallery,
-} from "./components";
+import { Skills, WorkExperience, EducationSection } from "./components";
 import { introductionData } from "./constants";
 import { contactMethods } from "./constants/contactMethods";
 
@@ -25,12 +20,12 @@ const headerLinks: HeaderLink[] = [
 export const App = () => {
   const handleLinkClick = (key: string) => {
     const element = document.getElementById(key);
+    if (!element) return;
 
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    if (key === "home") {
+      element?.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      element?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -38,15 +33,13 @@ export const App = () => {
     <>
       <Header links={headerLinks} onLinkClicked={handleLinkClick} />
 
-      <main className={classes.container}>
+      <main id="home" className={classes.container}>
         <div className={classes.content}>
-          <div id="home">
-            <Introduction
-              className={classes.introduction}
-              title={introductionData.title}
-              text={introductionData.text}
-            />
-          </div>
+          <Introduction
+            className={classes.introduction}
+            title={introductionData.title}
+            text={introductionData.text}
+          />
 
           <div id="skills">
             <Skills />
