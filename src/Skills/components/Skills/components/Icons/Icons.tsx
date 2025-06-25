@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import classNames from "classnames";
 
-import { Icon } from "~/Library/Icons";
+import { BrandIcon } from "~/Library/Icons";
 
 import type { IconsProps } from "./Icons.types";
 
@@ -17,12 +17,11 @@ export const Icons: FC<IconsProps> = (props) => {
   return (
     <div className={classNames(className, classes.skillsIcons)}>
       {skillsIcons.map((skillIcon, index) => (
-        <Icon
-          key={index}
-          icon={skillIcon.icon}
-          color={skillIcon.color}
-          className={classes.skillIcon}
-        />
+        <div key={index} className={classes.skillIconContainer}>
+          <BrandIcon icon={skillIcon.icon} />
+
+          <span className={classes.skillIconTitle}>{skillIcon.title}</span>
+        </div>
       ))}
     </div>
   );

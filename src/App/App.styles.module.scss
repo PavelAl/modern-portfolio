@@ -10,8 +10,10 @@
     flex-direction: column;
     gap: 32px;
     align-items: center;
-    max-width: 1600px;
-    margin: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 200px;
+    box-sizing: border-box;
 }
 
 .introduction {

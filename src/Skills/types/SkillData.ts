@@ -1,9 +1,10 @@
-import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import type { ComponentType } from "react";
 
+import type { BrandIconType } from "~/Library";
+
 export interface SkillIcon {
-  icon: IconProp;
-  color?: string;
+  icon: BrandIconType;
+  title: string;
 }
 
 export type SkillData = {
