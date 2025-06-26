@@ -1,6 +1,9 @@
 .skillsIcons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
     margin: 16px 0;
 }
