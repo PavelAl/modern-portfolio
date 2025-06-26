@@ -7,7 +7,7 @@
     &::before {
         content: "";
         position: absolute;
-        left: calc(32px + 80px + 16px + 12px + 14px); // padding + emblem width + gap/2 + marker center
+        left: calc(32px + 165px + 16px + 12px - 2px); // padding + emblem width + gap + marker width/2 - line width/2
         top: 12px; // Start from center of first marker
         bottom: 12px; // End at center of last marker
         width: 4px;

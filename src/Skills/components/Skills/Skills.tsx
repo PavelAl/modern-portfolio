@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import classNames from "classnames";
 
-import { Title, Icons, Image, Text } from "./components";
+import { Title, Icons, Image, Description } from "./components";
 import type { SkillsProps } from "./Skills.types";
 
 import classes from "./Skills.styles.module.scss";
@@ -13,6 +13,7 @@ export const Skills: FC<SkillsProps> = (props) => {
     direction = "left-right",
     title,
     text,
+    list,
     img,
     skillsIcons,
   } = props;
@@ -31,7 +32,7 @@ export const Skills: FC<SkillsProps> = (props) => {
 
         <Icons skillsIcons={skillsIcons} />
 
-        <Text text={text} />
+        <Description text={text} list={list} />
       </div>
 
       <Image className={classNames(customClasses?.image)} img={img} />

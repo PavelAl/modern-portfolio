@@ -12,5 +12,5 @@ export interface EducationProps {
   universityTitle: string;
   degree: string;
   dates: string;
-  ref?: RefObject<HTMLDivElement>;
+  ref?: RefObject<HTMLDivElement | null>;
 }

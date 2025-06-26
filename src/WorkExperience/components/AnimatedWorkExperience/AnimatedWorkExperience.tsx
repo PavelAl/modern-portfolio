@@ -18,7 +18,7 @@ export const AnimatedWorkExperience: FC<AnimatedWorkExperienceProps> = (
 
   const resultClasses: WorkExperienceClasses = {
     root: classNames(animatedClasses.root, props.classes?.root),
-    emblem: classNames(animatedClasses.left, props.classes?.emblem),
+    dates: classNames(animatedClasses.left, props.classes?.dates),
     marker: classNames(
       animationClasses.marker,
       isVisible && animationClasses.visible,

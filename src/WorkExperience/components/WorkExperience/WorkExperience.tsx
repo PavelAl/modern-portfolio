@@ -9,7 +9,7 @@ export const WorkExperience: FC<WorkExperienceProps> = (props) => {
   const {
     ref,
     classes: customClasses,
-    emblem: Emblem,
+    dates,
     title,
     position,
     description,
@@ -20,8 +20,8 @@ export const WorkExperience: FC<WorkExperienceProps> = (props) => {
       ref={ref}
       className={classNames(customClasses?.root, classes.workExperience)}
     >
-      <div className={classNames(customClasses?.emblem, classes.emblem)}>
-        <Emblem />
+      <div className={classNames(customClasses?.dates, classes.dates)}>
+        {dates}
       </div>
 
       <div className={classNames(customClasses?.marker, classes.marker)} />

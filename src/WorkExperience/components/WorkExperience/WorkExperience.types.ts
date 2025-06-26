@@ -1,8 +1,8 @@
-import type { ComponentType, RefObject } from "react";
+import type { RefObject } from "react";
 
 export interface WorkExperienceClasses {
   root?: string;
-  emblem?: string;
+  dates?: string;
   marker?: string;
   description?: string;
 }
@@ -11,7 +11,7 @@ export interface WorkExperienceProps {
   ref?: RefObject<HTMLDivElement | null>;
   classes?: WorkExperienceClasses;
 
-  emblem: ComponentType;
+  dates: string;
   title: string;
   position: string;
   description: string;

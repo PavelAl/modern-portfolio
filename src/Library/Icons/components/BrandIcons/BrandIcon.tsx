@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 import type { BrandIconProps } from "./BrandIcon.types";
-import { iconMap } from "./iconMap";
+import { iconMap } from "./components";
 
 export const BrandIcon: FC<BrandIconProps> = ({ icon, className }) => {
   const IconComponent = iconMap[icon];

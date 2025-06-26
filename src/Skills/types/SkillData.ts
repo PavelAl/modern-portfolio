@@ -10,7 +10,8 @@ export interface SkillIcon {
 export type SkillData = {
   key?: string;
   title: string;
-  text: string;
+  text?: string;
+  list?: string[];
   img: ComponentType;
   skillsIcons?: SkillIcon[];
 };
