@@ -21,7 +21,7 @@ import {
   TypescriptSVG,
   ViteSVG,
   VscodeSVG,
-} from "./components";
+} from "./icons";
 
 export const iconMap = {
   aws: AwsSVG,
