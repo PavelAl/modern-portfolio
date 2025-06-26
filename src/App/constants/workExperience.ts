@@ -3,24 +3,24 @@ import type { WorkExperienceData } from "../../WorkExperience";
 
 export const workExperienceData: WorkExperienceData[] = [
   {
-    title: "Senior Software Engineer",
-    position: "Full Stack Developer",
-    description:
-      "Led development of modern web applications using React, TypeScript, and Node.js. Mentored junior developers and implemented best practices for code quality and testing.",
-    emblem: DeveloperSVG,
-  },
-  {
-    title: "Software Engineer",
+    title: "Earnix (Sep 2022 – Feb 2025)",
     position: "Frontend Developer",
     description:
-      "Developed responsive user interfaces and collaborated with design teams to create intuitive user experiences. Worked with React, Redux, and modern CSS frameworks.",
+      "At Earnix, I played a key role in building a scalable React component library that powered the company’s migration from Vue. My focus on testing, documentation, and collaboration ensured a near-zero bug rate across multiple applications.",
     emblem: DeveloperSVG,
   },
   {
-    title: "Junior Developer",
-    position: "Web Developer",
+    title: "GET Information Technology GmbH (Mar 2021 – Jun 2022)",
+    position: "Frontend Developer",
     description:
-      "Started career building web applications and learning modern development practices. Gained experience with JavaScript, HTML, CSS, and version control systems.",
+      "At GET IT, I worked closely with cross-functional teams to improve project quality and meet delivery milestones. I modernized the codebase, introduced scalable UI components, and optimized application performance.",
+    emblem: DeveloperSVG,
+  },
+  {
+    title: "Conteq (Sep 2017 – Mar 2021)",
+    position: "Junior Frontend Developer",
+    description:
+      "At Conteq, I developed custom modules for SharePoint (2013, 2016, Online) and improved legacy systems for better performance. This role laid the foundation for my current React development expertise.",
     emblem: PolytechLogoSVG,
   },
 ];

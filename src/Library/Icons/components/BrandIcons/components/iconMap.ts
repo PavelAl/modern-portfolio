@@ -1,4 +1,9 @@
+import type { FC } from "react";
+
+import type { BrandIconType } from "../BrandIcon.types";
+
 import {
+  AccessibilitySVG,
   AwsSVG,
   CssSVG,
   FigmaSVG,
@@ -15,6 +20,7 @@ import {
   NpmSVG,
   ReactSVG,
   ReduxSVG,
+  ResponsiveDesignSVG,
   RollupSVG,
   SassSVG,
   StorybookSVG,
@@ -23,7 +29,11 @@ import {
   VscodeSVG,
 } from "./icons";
 
-export const iconMap = {
+export const iconMap: Record<
+  BrandIconType,
+  FC<React.SVGProps<SVGSVGElement>>
+> = {
+  accessibility: AccessibilitySVG,
   aws: AwsSVG,
   css: CssSVG,
   figma: FigmaSVG,
@@ -40,6 +50,7 @@ export const iconMap = {
   npm: NpmSVG,
   react: ReactSVG,
   redux: ReduxSVG,
+  responsiveDesign: ResponsiveDesignSVG,
   rollup: RollupSVG,
   sass: SassSVG,
   storybook: StorybookSVG,

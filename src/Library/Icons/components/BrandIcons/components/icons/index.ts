@@ -1,3 +1,4 @@
+export * from "./Accessibility";
 export * from "./Aws";
 export * from "./Css";
 export * from "./Figma";
@@ -14,6 +15,7 @@ export * from "./Nodejs";
 export * from "./Npm";
 export * from "./React";
 export * from "./Redux";
+export * from "./ResponsiveDesign";
 export * from "./Rollup";
 export * from "./Sass";
 export * from "./Storybook";

@@ -1,4 +1,5 @@
 export type BrandIconType =
+  | "accessibility"
   | "aws"
   | "css"
   | "figma"
@@ -15,6 +16,7 @@ export type BrandIconType =
   | "npm"
   | "react"
   | "redux"
+  | "responsiveDesign"
   | "rollup"
   | "sass"
   | "storybook"

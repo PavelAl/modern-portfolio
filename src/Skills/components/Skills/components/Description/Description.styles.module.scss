@@ -6,3 +6,13 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+.list {
+    padding: 0;
+
+    list-style: none;
+
+    li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}

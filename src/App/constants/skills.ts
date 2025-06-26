@@ -6,7 +6,12 @@ export const skillsData: SkillData[] = [
   {
     key: "frontend-development",
     title: "Frontend Development",
-    text: "Placeholder text for Frontend Development section. This will be updated with detailed content later.",
+    list: [
+      "Develop highly interactive, scalable user interfaces and applications",
+      "Build and maintain reusable component libraries aligned with design systems.",
+      "Ensure accessibility (WCAG) and cross-browser compatibility across all UI components.",
+      "Optimize performance through smart rendering patterns and bundle strategies.",
+    ],
     skillsIcons: [
       { icon: "react", title: "React" },
       { icon: "javascript", title: "JavaScript" },
@@ -22,7 +27,12 @@ export const skillsData: SkillData[] = [
   {
     key: "development-tools-practices",
     title: "Development Tools & Practices",
-    text: "Placeholder text for Development Tools & Practices section. This will be updated with detailed content later.",
+    list: [
+      "Apply test-driven development (TDD) principles to ensure fast and steady application growth",
+      "Thrive in Agile teams, delivering features iteratively with constant feedback loops.",
+      "Write clean, maintainable, and well-documented code to support team scalability.",
+      "Embrace AI-assisted tools like GitHub Copilot to accelerate development without sacrificing quality.",
+    ],
     skillsIcons: [
       { icon: "git", title: "Git" },
       { icon: "npm", title: "npm" },
@@ -37,21 +47,18 @@ export const skillsData: SkillData[] = [
   {
     key: "design-user-experience",
     title: "Design & User Experience",
-    text: "Placeholder text for Design & User Experience section. This will be updated with detailed content later.",
+    list: [
+      "Convert Figma designs into clean, accessible, production-ready applications.",
+      "Create pixel-perfect, intuitive UI components that align with brand and UX goals.",
+      "Advocate for usability and design consistency throughout the development process.",
+      "Apply accessibility best practices to ensure inclusive and compliant user experiences.",
+    ],
     skillsIcons: [
       { icon: "figma", title: "Figma" },
       { icon: "materialui", title: "Material UI" },
       { icon: "storybook", title: "Storybook" },
-    ],
-    img: DeveloperSVG,
-  },
-  {
-    key: "backend-cloud-technologies",
-    title: "Backend & Cloud Technologies",
-    text: "Placeholder text for Backend & Cloud Technologies section. This will be updated with detailed content later.",
-    skillsIcons: [
-      { icon: "nodejs", title: "Node.js" },
-      { icon: "aws", title: "AWS" },
+      { icon: "accessibility", title: "Accessibility" },
+      { icon: "responsiveDesign", title: "Responsive Design" },
     ],
     img: DeveloperSVG,
   },
