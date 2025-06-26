@@ -1,10 +1,8 @@
-import type { ComponentType } from "react";
-
 export interface WorkExperienceData {
   title: string;
   position: string;
   description: string;
-  emblem: ComponentType;
+  dates: string;
 }
 
 export interface WorkExperienceChartClasses {

@@ -23,7 +23,7 @@ export const WorkExperienceChart: FC<WorkExperienceChartProps> = (props) => {
           )}
         >
           <AnimatedWorkExperience
-            emblem={jobData.emblem}
+            dates={jobData.dates}
             title={jobData.title}
             position={jobData.position}
             description={jobData.description}
