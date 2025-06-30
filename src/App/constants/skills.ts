@@ -1,7 +1,5 @@
 import type { SkillData } from "~/Skills/types";
 
-import { DeveloperSVG } from "../assets";
-
 export const skillsData: SkillData[] = [
   {
     key: "frontend-development",
@@ -22,11 +20,10 @@ export const skillsData: SkillData[] = [
       { icon: "css", title: "CSS" },
       { icon: "sass", title: "Sass" },
     ],
-    img: DeveloperSVG,
   },
   {
     key: "development-tools-practices",
-    title: "Development Tools & Practices",
+    title: "Development Tools",
     list: [
       "Apply test-driven development (TDD) principles to ensure fast and steady application growth",
       "Thrive in Agile teams, delivering features iteratively with constant feedback loops.",
@@ -42,7 +39,6 @@ export const skillsData: SkillData[] = [
       { icon: "jenkins", title: "Jenkins" },
       { icon: "jira", title: "Jira" },
     ],
-    img: DeveloperSVG,
   },
   {
     key: "design-user-experience",
@@ -60,6 +56,5 @@ export const skillsData: SkillData[] = [
       { icon: "accessibility", title: "Accessibility" },
       { icon: "responsiveDesign", title: "Responsive Design" },
     ],
-    img: DeveloperSVG,
   },
 ];

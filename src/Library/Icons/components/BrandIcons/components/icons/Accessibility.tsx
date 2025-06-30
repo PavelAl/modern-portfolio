@@ -3,27 +3,17 @@ import type { FC, SVGProps } from "react";
 export const AccessibilitySVG: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
-      viewBox="0 0 16 16"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="WebAssembly"
+      role="img"
+      viewBox="56 56 400 400"
+      fill="#000000"
       {...props}
     >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
-
-      <g
-        id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+      <path
+        fill="#654ff0"
+        d="m159.1 270.1h24l16.5 87.2 19.8-87.2h22.5l17.9 88.3 18.9-88.3h23.5l-30.6 128.2h-23.8L230 311l-19.1 87.3h-24.3zm170.2 0h37.8l37.5 128.2h-24.7l-8.2-28.6h-43.1l-6.3 28.6h-24.1zm14.4 31.6-10.5 47h32.6l-12.1-47zM297.4 75c0 .6 0 1.3 0 2c0 22.9-18.6 41.5-41.5 41.5c-22.9 0-41.5-18.6-41.5-41.5c0-.7 0-1.4 0-2H75V437H437V75z"
       />
-
-      <g id="SVGRepo_iconCarrier">
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z"
-          fill="#000000"
-        />
-      </g>
     </svg>
   );
 };
