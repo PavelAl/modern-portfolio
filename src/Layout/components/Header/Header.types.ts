@@ -1,7 +1,4 @@
-export interface HeaderLink {
-  key: string;
-  text: string;
-}
+import type { HeaderLink } from "../../types";
 
 export interface HeaderProps {
   className?: string;

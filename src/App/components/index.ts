@@ -1,3 +1,3 @@
-export { Skills } from "./Skills";
-export { WorkExperience } from "./WorkExperience";
-export { EducationSection } from "./Education";
+export * from "./Education";
+export * from "./Skills";
+export * from "./WorkExperience";

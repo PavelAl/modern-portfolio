@@ -8,7 +8,7 @@ export interface EducationClasses {
 
 export interface EducationProps {
   classes?: EducationClasses;
-  emblem: ComponentType;
+  emblem: ComponentType<{ className: string }>;
   universityTitle: string;
   degree: string;
   dates: string;

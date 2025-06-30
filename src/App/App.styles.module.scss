@@ -1,5 +1,7 @@
+@use "~/theme/theme.scss" as *;
+
 .container {
-    padding-top: 104px; // 80px header height + 24px original padding
+    padding-top: 80px; // header height
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
@@ -8,12 +10,14 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
     align-items: center;
+    gap: $spacing * 5;
+
     max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 100px;
     box-sizing: border-box;
+
+    margin: 0 auto;
+    padding: $spacing * 4 100px $spacing * 2;
 }
 
 .introduction {

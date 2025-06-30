@@ -1,58 +1,52 @@
+@use "~/theme/theme.scss" as *;
+
 .workExperience {
     width: 100%;
-    padding: 0 32px;
 
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 16px;
 }
 
 .dates {
-    flex-shrink: 0;
     width: 165px;
-    font-size: 1rem;
+
+    font-size: $font-size-sm;
     font-weight: 600;
-    color: #3d7da8;
     text-align: center;
+    color: $primary-600;
 }
 
 .marker {
-    flex-shrink: 0;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #3d7da8;
+    background-color: $primary-600;
 }
 
 .description {
     display: flex;
     flex-direction: column;
+
     flex: 1;
-    gap: 8px;
 }
 
 .title {
-    line-height: 1.5;
-    font-size: 1.8rem;
+    font-size: $font-size-md;
     font-weight: 700;
-    color: #2c3e50;
-    margin: 0;
+    color: $primary-800;
 }
 
 .position {
-    line-height: 1.5;
-    font-size: 1.4rem;
+    font-size: $font-size-md;
     font-weight: 600;
-    color: #34495e;
-    margin: 0;
+    color: $text-800;
+
+    margin-bottom: $spacing;
 }
 
 .jobDescription {
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #7f8c8d;
-    margin: 0;
-    line-height: 1.5;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $text-600;
 }

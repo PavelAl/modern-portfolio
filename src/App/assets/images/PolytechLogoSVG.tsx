@@ -5,7 +5,7 @@ export const PolytechLogoSVG: FC<SVGProps<SVGSVGElement>> = (props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      viewBox="0 0 1000 885"
+      viewBox="100 120 800 635"
       {...props}
     >
       <g>

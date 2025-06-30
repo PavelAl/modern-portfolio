@@ -1,17 +1,18 @@
+@use "~/theme/theme.scss" as *;
+
 .education {
     width: 100%;
-    padding: 0 32px;
+    padding: 0 $spacing * 4;
 
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 32px;
+    gap: $spacing * 6;
 }
 
 .emblem {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    // height: 100px;
 
     svg {
         width: 100%;
@@ -23,26 +24,23 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 16px;
+    gap: $spacing * 0.5;
 }
 
 .universityTitle {
-    font-size: 2rem;
+    font-size: $font-size-lg;
     font-weight: 700;
-    color: #2c3e50;
-    margin: 0;
+    color: $primary-800;
 }
 
 .degree {
-    font-size: 1.5rem;
+    font-size: $font-size-md;
     font-weight: 600;
-    color: #34495e;
-    margin: 0;
+    color: $text-800;
 }
 
 .dates {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #7f8c8d;
-    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $text-600;
 }

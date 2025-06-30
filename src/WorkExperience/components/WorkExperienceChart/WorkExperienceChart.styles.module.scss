@@ -1,15 +1,20 @@
+@use "~/theme/theme.scss" as *;
+
 .workExperienceChart {
+    padding: 0 $spacing * 4;
+
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 24px;
 
     &::before {
         content: "";
         position: absolute;
-        left: calc(32px + 165px + 16px + 12px - 2px); // padding + emblem width + gap + marker width/2 - line width/2
-        top: 12px; // Start from center of first marker
-        bottom: 12px; // End at center of last marker
+        left: 32px + 165px + 16px + 12px - 2px; // padding + dates width + gap + marker width/2 - line width/2
+        top: -8px;
+        bottom: -8px;
         width: 4px;
         background: linear-gradient(
             to bottom,
@@ -19,14 +24,5 @@
             transparent 100%
         );
         z-index: 1;
-    }
-}
-
-.workExperience {
-    position: relative;
-    // z-index: 2;
-
-    &:not(:last-child) {
-        margin-bottom: 24px;
     }
 }

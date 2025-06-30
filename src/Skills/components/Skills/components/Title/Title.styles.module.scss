@@ -1,6 +1,9 @@
+@use "~/theme/theme.scss" as *;
+
 .title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: $font-size-xl;
+    color: $text-800;
+    font-weight: 600;
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: center;

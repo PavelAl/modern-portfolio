@@ -15,12 +15,12 @@ export const Icons: FC<IconsProps> = (props) => {
   }
 
   return (
-    <div className={classNames(className, classes.skillsIcons)}>
+    <div className={classNames(className, classes.icons)}>
       {skillsIcons.map((skillIcon, index) => (
-        <div key={index} className={classes.skillIconContainer}>
+        <div key={index} className={classes.container}>
           <BrandIcon icon={skillIcon.icon} />
 
-          <span className={classes.skillIconTitle}>{skillIcon.title}</span>
+          <span className={classes.title}>{skillIcon.title}</span>
         </div>
       ))}
     </div>

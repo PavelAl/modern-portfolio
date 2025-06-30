@@ -1,0 +1,25 @@
+@use "~/theme/theme.scss" as *;
+
+.contactSource {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+
+    border: 1px solid $grey-600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.icon {
+    font-size: $font-size-lg;
+}

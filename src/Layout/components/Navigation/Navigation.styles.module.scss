@@ -1,0 +1,7 @@
+@use "~/theme/theme.scss" as *;
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: $spacing * 3;
+}

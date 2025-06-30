@@ -1,0 +1,9 @@
+@use "~/theme/theme.scss" as *;
+
+.education {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: $spacing * 6;
+}

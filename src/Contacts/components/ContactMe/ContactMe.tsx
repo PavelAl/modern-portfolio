@@ -1,12 +1,13 @@
-import React from "react";
+import { type FC } from "react";
+import classNames from "classnames";
 
-import { Icon } from "~/Library/Icons";
+import { ContactSources } from "../ContactSources";
 
 import type { ContactMeProps } from "./ContactMe.types";
 
 import styles from "./ContactMe.styles.module.scss";
 
-export const ContactMe: React.FC<ContactMeProps> = ({
+export const ContactMe: FC<ContactMeProps> = ({
   id,
   title,
   text,
@@ -14,30 +15,12 @@ export const ContactMe: React.FC<ContactMeProps> = ({
   className,
 }) => {
   return (
-    <div id={id} className={`${styles.contactMe} ${className || ""}`}>
+    <div id={id} className={classNames(styles.contactMe, className)}>
       <h2 className={styles.title}>{title}</h2>
 
       <p className={styles.text}>{text}</p>
 
-      <div className={styles.contactSources}>
-        {contactSources.map((source, index) => (
-          <a
-            key={index}
-            href={source.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.contactSource}
-            aria-label={source.label}
-            title={source.label}
-          >
-            <Icon
-              icon={source.icon}
-              color={source.color}
-              className={styles.icon}
-            />
-          </a>
-        ))}
-      </div>
+      <ContactSources contactMethods={contactSources} />
     </div>
   );
 };

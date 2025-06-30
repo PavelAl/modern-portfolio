@@ -8,19 +8,14 @@ import type { WorkExperienceChartProps } from "./WorkExperienceChart.types";
 import classes from "./WorkExperienceChart.styles.module.scss";
 
 export const WorkExperienceChart: FC<WorkExperienceChartProps> = (props) => {
-  const { data, classes: customClasses } = props;
+  const { data, classes: propClasses } = props;
 
   return (
-    <div
-      className={classNames(customClasses?.root, classes.workExperienceChart)}
-    >
+    <div className={classNames(propClasses?.root, classes.workExperienceChart)}>
       {data.map((jobData, index) => (
         <div
           key={`${jobData.title}-${index}`}
-          className={classNames(
-            customClasses?.workExperience,
-            classes.workExperience,
-          )}
+          className={propClasses?.workExperience}
         >
           <AnimatedWorkExperience
             dates={jobData.dates}

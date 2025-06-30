@@ -1,8 +1,7 @@
-.text {
-    margin: 0;
+@use "~/theme/theme.scss" as *;
 
-    font-size: 1rem;
-    line-height: 1.5;
+.text {
+    font-size: $font-size-sm;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }

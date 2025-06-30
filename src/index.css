@@ -12,9 +12,8 @@ html, body {
 
 body {
     overflow-x: hidden;
-    background: var(--primary-100);
     color: var(--text-800);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 #root {

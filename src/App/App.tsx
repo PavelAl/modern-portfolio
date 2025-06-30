@@ -65,6 +65,9 @@ export const App: FC = () => {
             className={classes.introduction}
             title={introductionData.title}
             text={introductionData.text}
+            resumeLink={introductionData.resumeLink}
+            contactMethods={introductionData.contactMethods}
+            image={introductionData.image}
           />
 
           <Skills id="skills" />
