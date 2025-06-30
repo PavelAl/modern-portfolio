@@ -1,38 +1,37 @@
+@use "~/theme/theme.scss" as *;
+
 .sectionHeader {
     text-align: center;
-    padding: 3rem 0;
-    // margin: 2rem 0;
 }
 
 .title {
-    font-size: 3rem;
+    font-size: $font-size-xxl;
     font-weight: 700;
-    color: #333;
-    margin: 0;
+    color: $text-800;
     text-transform: uppercase;
     letter-spacing: 2px;
+
     position: relative;
 
     &::after {
         content: "";
+
         position: absolute;
-        bottom: -1rem;
+        bottom: -$spacing;
         left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
+
+        width: 200px;
         height: 4px;
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
         border-radius: 2px;
+
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+
+        transform: translateX(-50%);
     }
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: 2.5rem;
-        letter-spacing: 1px;
-    }
-
-    .sectionHeader {
-        padding: 3rem 1rem;
+        font-size: $font-size-lg;
     }
 }

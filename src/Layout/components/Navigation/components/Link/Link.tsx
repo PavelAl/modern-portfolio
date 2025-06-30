@@ -1,11 +1,11 @@
-import React from "react";
+import { type FC } from "react";
 import classNames from "classnames";
 
-import type { HeaderLinkProps } from "./HeaderLink.types";
+import type { LinkProps } from "./Link.types";
 
-import styles from "./HeaderLink.styles.module.scss";
+import styles from "./Link.styles.module.scss";
 
-export const HeaderLink: React.FC<HeaderLinkProps> = (props) => {
+export const Link: FC<LinkProps> = (props) => {
   const { className, link, onClick } = props;
 
   return (

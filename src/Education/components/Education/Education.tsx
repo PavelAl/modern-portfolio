@@ -20,9 +20,10 @@ export const Education: FC<EducationProps> = (props) => {
       ref={ref}
       className={classNames(customClasses?.root, classes.education)}
     >
-      <div className={classNames(customClasses?.emblem, classes.emblem)}>
-        <Emblem />
-      </div>
+      {/* <div className={classNames(customClasses?.emblem, classes.emblem)}> */}
+      <Emblem className={classNames(customClasses?.emblem, classes.emblem)} />
+
+      {/* </div> */}
 
       <div className={classNames(customClasses?.info, classes.info)}>
         <h3 className={classes.universityTitle}>{universityTitle}</h3>

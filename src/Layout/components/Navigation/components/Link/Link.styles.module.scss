@@ -1,31 +1,37 @@
+@use "~/theme/theme.scss" as *;
+
 .link {
     text-decoration: none;
-    color: var(--text-600);
-    font-size: var(--font-size-md);
+    color: $text-600;
+    font-size: $font-size-md;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+
+    padding: $spacing $spacing * 2;
+
     border-radius: 4px;
     position: relative;
-    transition: background-color 0.2s ease;
     background: none;
     outline: none;
     border: none;
+
     cursor: pointer;
+
+    transition: background-color 0.2s ease;
 
     &::after {
         content: "";
         position: absolute;
         bottom: 0.25rem;
-        left: 1rem;
+        left: $spacing * 2;
         width: 0;
         height: 2px;
-        background-color: var(--primary-600);
+        background-color: $primary-600;
         transition: width 0.3s ease;
     }
 
     &:hover,
     &:focus {
-        color: var(--text-800);
+        color: $text-800;
 
         &::after {
             width: calc(100% - 2rem);

@@ -5,7 +5,7 @@ import type { IconProps } from "./Icon.types";
 
 import styles from "./Icon.styles.module.scss";
 
-export const Icon: React.FC<IconProps> = (props) => {
+export const Icon: FC<IconProps> = (props) => {
   const {
     "aria-label": ariaLabel,
     title,

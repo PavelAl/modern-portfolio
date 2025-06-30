@@ -1,11 +1,12 @@
+@use "~/theme/theme.scss" as *;
+
 .skills {
     width: 100%;
-    padding: 0 32px;
+    padding: 0 $spacing * 4;
 
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 32px;
+    gap: $spacing * 4;
 
     &.leftRight {
         flex-direction: row;

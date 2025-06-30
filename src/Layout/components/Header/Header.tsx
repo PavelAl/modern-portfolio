@@ -1,12 +1,13 @@
-import React from "react";
+import { type FC } from "react";
 import classNames from "classnames";
 
+import { Navigation } from "../Navigation";
+
 import type { HeaderProps } from "./Header.types";
-import { HeaderLink } from "./components";
 
 import styles from "./Header.styles.module.scss";
 
-export const Header: React.FC<HeaderProps> = (props) => {
+export const Header: FC<HeaderProps> = (props) => {
   const { className, links, isVisible, onLinkClicked } = props;
 
   return (
@@ -19,11 +20,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
     >
       <div className={styles.logo}>Pavel Oparin</div>
 
-      <nav className={styles.navigation}>
-        {links?.map((link) => (
-          <HeaderLink key={link.key} link={link} onClick={onLinkClicked} />
-        ))}
-      </nav>
+      <Navigation links={links} onLinkClicked={onLinkClicked} />
     </header>
   );
 };

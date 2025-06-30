@@ -1,2 +1,2 @@
-export { ContactMe } from "./ContactMe";
+export * from "./ContactMe";
 export type { ContactMeProps } from "./ContactMe.types";
