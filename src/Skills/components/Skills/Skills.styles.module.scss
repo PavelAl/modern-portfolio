@@ -6,6 +6,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: $spacing * 4;
 
     &.leftRight {
@@ -22,6 +23,6 @@
     flex-direction: column;
     flex: 1;
 
-    max-width: 50%;
+    max-width: 850px;
     min-width: 0;
 }

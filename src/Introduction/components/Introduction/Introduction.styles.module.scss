@@ -13,8 +13,9 @@
 }
 
 .title {
-    font-size: $font-size-xl;
+    margin-bottom: $spacing;
 
+    font-size: $font-size-xl;
     font-weight: bold;
     word-wrap: break-word;
     overflow-wrap: break-word;

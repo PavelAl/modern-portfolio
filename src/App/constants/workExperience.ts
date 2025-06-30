@@ -3,7 +3,7 @@ import type { WorkExperienceData } from "../../WorkExperience";
 export const workExperienceData: WorkExperienceData[] = [
   {
     title: "Earnix",
-    position: "Frontend Developer",
+    position: "Frontend Developer - Senior Frontend Developer",
     description:
       "At Earnix, I played a key role in building a scalable React component library that powered the company's migration from Vue. My focus on testing, documentation, and collaboration ensured a near-zero bug rate across multiple applications.",
     dates: "Sep 2022 – Feb 2025",
