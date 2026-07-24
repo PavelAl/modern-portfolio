@@ -25,10 +25,9 @@
 
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["./src/*"]
     },
   },
-  "include": ["src"]
+  "include": ["./src"]
 }

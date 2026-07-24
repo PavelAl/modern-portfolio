@@ -34,3 +34,9 @@
     font-size: $font-size-xxl;
     color: $primary-800;
 }
+
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}

@@ -4,3 +4,4 @@ export type {
   FooterProps,
   SectionHeaderProps,
 } from "./components";
+export type { HeaderLink } from "./types";

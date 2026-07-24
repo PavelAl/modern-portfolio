@@ -2,6 +2,13 @@ import type { WorkExperienceData } from "../../WorkExperience";
 
 export const workExperienceData: WorkExperienceData[] = [
   {
+    title: "Roofr",
+    position: "Senior Frontend Developer",
+    description:
+      "At Roofr, I worked on the Architecture and Infrastructure team,supporting high-priority initiatives, modernizing development tooling, prototyping AI-assisted codebase analysis, and expanding the company’s design system.",
+    dates: "Aug 2025 – Jul 2026",
+  },
+  {
     title: "Earnix",
     position: "Frontend Developer - Senior Frontend Developer",
     description:

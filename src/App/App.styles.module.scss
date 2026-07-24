@@ -23,3 +23,14 @@
 .introduction {
     max-width: 1300px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 0;
+    }
+
+    .content {
+        gap: $spacing * 3;
+        padding: $spacing * 2 $spacing $spacing * 2;
+    }
+}
