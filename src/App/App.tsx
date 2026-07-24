@@ -4,12 +4,11 @@ import type { FC } from "react";
 import { Introduction } from "~/Introduction";
 import { Header, Footer } from "~/Layout";
 import { ContactMe } from "~/Contacts";
-import type { HeaderLink } from "~/Layout/components";
-import { useScrollDirection } from "~/Library/Scrolling";
+import type { HeaderLink } from "~/Layout";
+import { useScrollDirection, WindowWidthProvider } from "~/Library";
 
 import { Skills, WorkExperience, EducationSection } from "./components";
-import { introductionData } from "./constants";
-import { contactMethods } from "./constants/contactMethods";
+import { introductionData, contactMethods } from "./constants";
 
 import classes from "./App.styles.module.scss";
 
@@ -39,7 +38,7 @@ export const App: FC = () => {
   };
 
   return (
-    <>
+    <WindowWidthProvider>
       <Header
         links={headerLinks}
         isVisible={headerIsVisible}
@@ -86,6 +85,6 @@ export const App: FC = () => {
           <Footer />
         </div>
       </main>
-    </>
+    </WindowWidthProvider>
   );
 };

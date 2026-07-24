@@ -1,0 +1,7 @@
+@use "~/theme/theme.scss" as *;
+
+.dates {
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: $primary-600;
+}

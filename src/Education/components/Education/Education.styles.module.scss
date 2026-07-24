@@ -12,7 +12,6 @@
 .emblem {
     flex-shrink: 0;
     width: 100px;
-    // height: 100px;
 
     svg {
         width: 100%;
@@ -43,4 +42,11 @@
     font-size: $font-size-sm;
     font-weight: 500;
     color: $text-600;
+}
+
+@media (max-width: 768px) {
+    .education {
+        flex-direction: column;
+        gap: $spacing * 3;
+    }
 }

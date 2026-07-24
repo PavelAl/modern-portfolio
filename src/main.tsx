@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { App } from "./App/App.tsx";
+import { App } from "./App";
 import "./theme/theme.css";
 import "./index.css";
 import "./fontawesome";

@@ -1,0 +1,9 @@
+@use "~/theme/theme.scss" as *;
+
+.mobileWorkExperience {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+}

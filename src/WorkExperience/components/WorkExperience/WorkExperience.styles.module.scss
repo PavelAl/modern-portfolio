@@ -10,11 +10,7 @@
 
 .dates {
     width: 165px;
-
-    font-size: $font-size-sm;
-    font-weight: 600;
     text-align: center;
-    color: $primary-600;
 }
 
 .marker {
@@ -22,31 +18,4 @@
     height: 24px;
     border-radius: 50%;
     background-color: $primary-600;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-}
-
-.title {
-    font-size: $font-size-md;
-    font-weight: 700;
-    color: $primary-800;
-}
-
-.position {
-    font-size: $font-size-md;
-    font-weight: 600;
-    color: $text-800;
-
-    margin-bottom: $spacing;
-}
-
-.jobDescription {
-    font-size: $font-size-sm;
-    font-weight: 500;
-    color: $text-600;
 }

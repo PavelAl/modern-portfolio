@@ -4,6 +4,7 @@ import classNames from "classnames";
 import type { IconProps } from "./Icon.types";
 
 import styles from "./Icon.styles.module.scss";
+import type { FC } from "react";
 
 export const Icon: FC<IconProps> = (props) => {
   const {
